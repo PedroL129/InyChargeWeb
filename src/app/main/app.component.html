@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <h1>InyCharge</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/charge_point'"> Charge Points </a>
+      <a mat-button [routerLink]="'/organization'"> Organizations </a>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span style="font-size: 12px;"
+      >InyCharge helps you easily manage your charge points</span
+    >
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

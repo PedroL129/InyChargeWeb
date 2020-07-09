@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>Add new Organization</h2>
+<form class="mat-dialog-content" (ngSubmit)="(submit)">
+  <div class="form">
+    <mat-form-field color="accent">
+      <input
+        matInput
+        #input
+        class="form-control"
+        placeholder="Id"
+        [(ngModel)]="data.organization.id"
+        name="id"
+        disabled
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form">
+    <mat-form-field color="accent">
+      <input
+        matInput
+        #input
+        class="form-control"
+        placeholder="name"
+        [(ngModel)]="data.organization.name"
+        name="name"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form">
+    <mat-form-field color="accent">
+      <input
+        matInput
+        #input
+        class="form-control"
+        placeholder="legalEntity"
+        [(ngModel)]="data.organization.legalEntity"
+        name="legalEntity"
+        required
+      />
+    </mat-form-field>
+  </div>
+
+  <!--Contains mat-hint for characters count and has maxLengt set-->
+
+  <div mat-dialog-actions>
+    <button
+      mat-button
+      [type]="submit"
+      [mat-dialog-close]="1"
+      (click)="confirm()"
+    >
+      Save
+    </button>
+    <button mat-button (click)="cancel()" tabindex="-1">Cancel</button>
+  </div>
+</form>
